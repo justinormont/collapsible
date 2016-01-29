@@ -1,5 +1,5 @@
 {
-    "name": "collapsable",
+    "name": "collapsible",
     "version": "1.0.0",
     "description": "Pretty print JSON while auto-collapsing short JSON objects",
     "main": "index.js",
@@ -8,7 +8,7 @@
     },
     "repository" : {
         "type" : "git",
-        "url" : "https://github.com/justinormont/collapsable.git"
+        "url" : "https://github.com/justinormont/collapsible.git"
     },
     "keywords": [
         "JSON",
