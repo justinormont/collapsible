@@ -14,6 +14,10 @@ Collapsible is configurable:
 * **sameLineBrackets** (default: *false*) inserts a newline between an array of arrays
 * **typeOrder** (defult: *{ boolean: 1, number: 2, string: 3, default: 99 }*) sets the ordering of keys in an object
 
+## Install
+```bash
+npm install --save collapsible
+```
 
 ## Examples
 
