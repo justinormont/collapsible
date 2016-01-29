@@ -1,5 +1,5 @@
 # collapsible
-Pretty print JSON while auto-collapsing short JSON objects
+Pretty print JSON while auto-collapsing short JSON segments
 
 ## Options
 Collapsible is configurable:
