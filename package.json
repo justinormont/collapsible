@@ -1,0 +1,19 @@
+{
+    "name": "collapsable",
+    "version": "1.0.0",
+    "description": "Pretty print JSON while auto-collapsing short JSON objects",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/justinormont/collapsable.git"
+    },
+    "keywords": [
+        "JSON",
+        "pretty print"
+    ],
+    "author": "Justin Ormont (https://linkedin.com/in/justinormont)",
+    "license": "see LICENSE"
+}
