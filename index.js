@@ -40,7 +40,7 @@ function stringify(obj, opts, depth) {
             } else if (Array.isArray(obj)) {
                 str = '[' + (opts.spaceInsideBrackets?' ':'') + '\n';
                 str += Object.keys(obj)
-                    .map(function(key, i, arr){ return (depth <= opts.doubleSpaceDepth && i?'\n':'') + '\t' + indent + prettyPrint(obj[key], opts, depth+1); })
+                    .map(function(key, i, arr){ return (depth <= opts.doubleSpaceDepth && i?'\n':'') + '\t' + indent + stringify(obj[key], opts, depth+1); })
                     .join(',' + (opts.spaceAfterComma?' ':'') + '\n');
                 str += (opts.spaceInsideBrackets?' ':'') + '\n' + indent + ']';
                 if (opts.sameLineBrackets) { str = str.replace(/\n\t*\[/g,'['); }
@@ -48,7 +48,7 @@ function stringify(obj, opts, depth) {
                 str = '{' + (opts.spaceInsideBraces?' ':'') + '\n';
                 str += Object.keys(obj)
                     .sort(function(a,b){ var sa=opts.typeOrder[typeof obj[a]]||opts.typeOrder.default, sb=opts.typeOrder[typeof obj[b]]||opts.typeOrder.default; return ((sa !== sb)?(sa - sb):(a>b?1:-1)); })
-                    .map(function(key, i, arr){ return (depth <= opts.doubleSpaceDepth && i?'\n':'') + '\t' + indent + JSON.stringify(key) + (opts.spaceBeforeColon?' ':'') + ':' + (opts.spaceAfterColon?' ':'') + prettyPrint(obj[key], opts, depth+1); })
+                    .map(function(key, i, arr){ return (depth <= opts.doubleSpaceDepth && i?'\n':'') + '\t' + indent + JSON.stringify(key) + (opts.spaceBeforeColon?' ':'') + ':' + (opts.spaceAfterColon?' ':'') + stringify(obj[key], opts, depth+1); })
                     .join(',' + (opts.spaceAfterComma?' ':'') + '\n');
                 str += (opts.spaceInsideBraces?' ':'') + '\n' + indent + '}';
                 if (opts.sameLineBraces) { str = str.replace(/\n\t*\{/g,'{'); }
