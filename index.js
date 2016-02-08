@@ -57,6 +57,7 @@ function stringify(obj, opts, depth) {
             if (str.length < opts.maxLength) { str = str.replace(/\n\t*/g,''); } // collapse short JSON sections
             if (/ \n/.test(str)) { str = str.replace(/ \n/g,'\n'); } // remove extraneous spaces
             if (/^{ +}/.test(str)) { str = str.replace(/^{ +}/,'{}'); } // collapse empty braces
+            if (/^\[ +\]/.test(str)) { str = str.replace(/^\[ +\]/,'[]'); } // collapse empty brackets
 
             return str;
 
